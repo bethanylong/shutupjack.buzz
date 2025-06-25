@@ -6,6 +6,8 @@ Usage
 
 1. Go to https://shutupjack.buzz
 2. Click buttons
+3. Reload page if things break
+    - todo: use [screen wake lock API](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API) so things break slightly less
 
 
 Errata
