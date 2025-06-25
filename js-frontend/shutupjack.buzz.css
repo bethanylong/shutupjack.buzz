@@ -1,11 +1,21 @@
 html {
     font-family: sans-serif;
+    background: white;
+    color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background: black;
+        color: white;
+    }
 }
 
 .button {
     display: inline-block;
     padding: 1em;
     background: yellow;
+    color: black;
     cursor: pointer;
     border: 0.1em solid black;
 }
