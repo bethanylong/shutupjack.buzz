@@ -4,7 +4,7 @@ shutupjack.buzz
 Usage
 -----
 
-1. Go to [https://shutupjack.buzz/]
+1. Go to https://shutupjack.buzz
 2. Click buttons
 
 
