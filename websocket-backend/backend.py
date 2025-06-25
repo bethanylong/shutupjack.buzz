@@ -15,18 +15,13 @@ async def echo(websocket):
                 print("Added new Jack")
                 JACKS.add(websocket)
                 await websocket.send("Hi Jack!")
-                #try:
-                #    await websocket.wait_closed()
-                #finally:
-                #    JACKS.remove(websocket)
-                #    print("Removed a Jack")
         elif message == "shut up":
             print(f"Telling {len(JACKS)} Jacks to shut up")
             closed_jacks = set()
             for jack in JACKS:
                 try:
                     await jack.send("Please shut up")
-                except ConnectionClosedOK:
+                except ConnectionClosed:
                     # Jack is gone
                     closed_jacks.add(jack)
             for closed_jack in closed_jacks:
@@ -44,8 +39,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    #import logging
-    #logger = logging.getLogger("websockets")
-    #logger.setLevel(logging.DEBUG)
-    #logger.addHandler(logging.StreamHandler())
     asyncio.run(main())
